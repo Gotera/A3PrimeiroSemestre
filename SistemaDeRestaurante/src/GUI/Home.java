@@ -108,6 +108,8 @@ public class Home extends JFrame {
 		button_1.setBackground(new Color(11, 3, 91));
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Cardapio cardapio = new Cardapio();
+				cardapio.setVisible(true);
 			}
 		});
 		button_1.setBounds(85, 298, 157, 98);

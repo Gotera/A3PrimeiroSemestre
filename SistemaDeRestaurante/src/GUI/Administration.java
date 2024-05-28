@@ -21,6 +21,7 @@ import javax.swing.UIManager;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.Toolkit;
 
 public class Administration extends JFrame {
 
@@ -61,14 +62,36 @@ public class Administration extends JFrame {
 		button.setFont(new Font("Dialog", Font.BOLD, 14));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Estoque estoque = new Estoque();
+				estoque.setVisible(true);
 			}
 		});
+		
+		Button button_2 = new Button("Trocar Senha");
+		button_2.setActionCommand("Trocar Senha");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TrocarSenha trocarSenha = new TrocarSenha();
+				trocarSenha.setVisible(true);
+			}
+		});
+		button_2.setForeground(Color.WHITE);
+		button_2.setFont(new Font("Dialog", Font.BOLD, 14));
+		button_2.setBackground(new Color(11, 3, 91));
+		button_2.setBounds(584, 9, 190, 24);
+		contentPane.add(button_2);
 		button.setForeground(Color.WHITE);
 		button.setBackground(new Color(11, 3, 91));
 		button.setBounds(11, 9, 190, 101);
 		contentPane.add(button);
 		
 		Button button_1 = new Button("Gestão de Cardápio");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GestaoDeCardapio gestaoDeCardapio = new GestaoDeCardapio();
+				gestaoDeCardapio.setVisible(true);
+			}
+		});
 		button_1.setFont(new Font("Dialog", Font.BOLD, 14));
 		button_1.setForeground(Color.WHITE);
 		button_1.setBackground(new Color(11, 3, 91));
@@ -76,6 +99,12 @@ public class Administration extends JFrame {
 		contentPane.add(button_1);
 		
 		Button button_1_1 = new Button("Gerir formas de Pagamento");
+		button_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FormasDePagamento formasDePagamento = new FormasDePagamento();
+				formasDePagamento.setVisible(true);
+			}
+		});
 		button_1_1.setFont(new Font("Dialog", Font.BOLD, 13));
 		button_1_1.setForeground(Color.WHITE);
 		button_1_1.setBackground(new Color(11, 3, 91));
@@ -83,6 +112,12 @@ public class Administration extends JFrame {
 		contentPane.add(button_1_1);
 		
 		Button button_1_1_1 = new Button("Visualizar os Pedidos Abertos");
+		button_1_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FilaDePedidos filaDePedidos = new FilaDePedidos();
+				filaDePedidos.setVisible(true);
+			}
+		});
 		button_1_1_1.setFont(new Font("Dialog", Font.BOLD, 12));
 		button_1_1_1.setForeground(Color.WHITE);
 		button_1_1_1.setBackground(new Color(11, 3, 91));
